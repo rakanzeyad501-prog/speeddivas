@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="فريق SpeedDivas - أول وأقوى فريق نسائي لرياضة السيارات، سباقات الحلبات، وتعديل السيارات السوبر سبورت باللون الوردي والأبيض الفاخر.">
+  <title>SpeedDivas | فريق سيارات سبورت نسائي</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff2a85'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z'/></svg>">
+
+  <!-- Unified Master Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="SpeedDivas الرئيسية">
+        <div class="logo-icon">
+          <!-- Turbocharger / Racing Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5v-3.25l2.25 2.25 1.41-1.41L13 10.42V7.5h-2v3.17l-3.66 3.67 1.41 1.41L11 13.5v3h2z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-speed">SPEED</span><span class="brand-divas">DIVAS</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="main-nav">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link">من نحن</a></li>
+          <li><a href="garage.html" class="nav-link">أسطول السيارات</a></li>
+          <li><a href="events.html" class="nav-link">الفعاليات والسباقات</a></li>
+          <li><a href="membership.html" class="nav-link">الانضمام والعضوية</a></li>
+          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Interactive Engine Rev FX Button -->
+        <button id="engineRevBtn" class="btn btn-outline-pink btn-sm" title="استمعي لصوت محرك SpeedDivas">
+          <span>🔊 دَوسة المحرك</span>
+        </button>
+
+        <!-- Join Team CTA Modal Trigger -->
+        <button class="btn btn-primary btn-sm open-join-modal">
+          <span>انضمي للفريق ⚡</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (WITH VIDEO BACKGROUND) ==================== -->
+  <section class="hero" id="home">
+    
+    <!-- Background Video & Gradients -->
+    <div class="hero-video-container">
+      <video class="hero-video" id="heroVideo" autoplay loop muted playsinline poster="img/hero-car-poster.jpg">
+        <!-- Local Fast Source -->
+        <source src="assets/videos/hero-drift.webm" type="video/webm">
+        <!-- Remote CDN Backup -->
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9d/Cars_drifting_around_a_race_track_at_twilight_and_night_as_viewed_from_FPV_drone.webm/Cars_drifting_around_a_race_track_at_twilight_and_night_as_viewed_from_FPV_drone.webm.720p.vp9.webm" type="video/webm">
+        متصفحك لا يدعم تشغيل مقطع الفيديو المباشر.
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Video Play/Pause Controller -->
+    <button class="video-ctrl-btn" id="videoCtrlBtn" title="التحكم بخلفية الفيديو">
+      <svg id="videoCtrlIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <rect x="6" y="4" width="4" height="16"></rect>
+        <rect x="14" y="4" width="4" height="16"></rect>
+      </svg>
+      <span id="videoCtrlText">إيقاف الفيديو</span>
+    </button>
+
+    <!-- Hero Content -->
+    <div class="container hero-content">
+      
+      <!-- Highlight Badge -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>🏎️ أول وأقوى فريق نسائي لرياضة وتعديل السيارات السوبر سبورت</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="hero-title">
+        السرعة، القوة، والأناقة<br>
+        <span class="gradient-text-pink">بأنوثة لا تُقهر</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-subtitle">
+        فريق <strong class="text-pink">SpeedDivas</strong> يجمع شغف قيادة السيارات الخارقة، واحتراف حلبات السباق والدريفت، مع لمسات التصميم الوردي والأبيض الفاخر في مجتمع نسائي رائد.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="hero-cta">
+        <a href="#garage" class="btn btn-primary btn-lg">
+          <span>استكشفي أسطولنا 🏁</span>
+        </a>
+        <button class="btn btn-outline-white btn-lg open-join-modal">
+          <span>انضمي إلى الديفاز ✨</span>
+        </button>
+      </div>
+
+      <!-- Live Speed & Telemetry Strip -->
+      <div class="hero-telemetry">
+        <div class="telemetry-item">
+          <div class="telemetry-num">
+            <span>+</span><div class="counter-val" data-target="52">0</div>
+          </div>
+          <div class="telemetry-label">كابتن وقائدة سيارة خارقة</div>
+        </div>
+
+        <div class="telemetry-item">
+          <div class="telemetry-num">
+            <span>+</span><div class="counter-val" data-target="19">0</div>
+          </div>
+          <div class="telemetry-label">بطولة وسباق حلبات</div>
+        </div>
+
+        <div class="telemetry-item">
+          <div class="telemetry-num">
+            <div class="counter-val" data-target="850">0</div><span>HP</span>
+          </div>
+          <div class="telemetry-label">أعلى قوة محرك معدل</div>
+        </div>
+
+        <div class="telemetry-item">
+          <div class="telemetry-num">
+            <div class="counter-val" data-target="2.7">0</div><span>S</span>
+          </div>
+          <div class="telemetry-label">تسارع 0 إلى 100 كم/س</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT / MISSION TEASER ==================== -->
+  <section class="section section-dark" id="about">
+    <div class="container">
+      
+      <div class="intro-grid">
+        
+        <!-- Showcase Image Frame -->
+        <div class="intro-image-wrap">
+          <div class="intro-image-frame">
+            <img src="img/supercar-1.jpg" alt="سيارة سوبر سبورت لفريق SpeedDivas على الحلبة">
+          </div>
+          
+          <div class="intro-floating-badge">
+            <div class="badge-icon">🏆</div>
+            <div>
+              <h4>بطلات تحدي الحلبات</h4>
+              <p>مراكز أولى في سباقات الدريفت والتايم أتاك</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="intro-content">
+          <span class="section-tag">هويتنا وشغفنا</span>
+          <h3 class="section-title">
+            نحن لا نتبع المسار..<br>
+            <span class="gradient-text-pink">بل نصنع خط الانطلاق!</span>
+          </h3>
+          <p>
+            تأسس فريق <strong>SpeedDivas</strong> ليكون البيت الحقيقي لكل فتاة تعشق صوت محركات الـ V8 والـ Twin-Turbo، وتطمح لكسر الأرقام القياسية على أسرع حلبات السباق العالمية بروح نسائية ملهمة وواثقة.
+          </p>
+          <p>
+            نمزج بين الهندسة الميكانيكية الدقيقة، التعديل الرياضي الفاخر بكسوة اللون الوردي والأبيض اللؤلؤي، وتوفير برامج تدريب احترافية مع مدربات دوليات معتمدات من الاتحاد الدولي للسيارات.
+          </p>
+
+          <!-- Feature Bullets -->
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-text">
+                <h5>تدريب حلبات متقدم</h5>
+                <p>تحكم فائق بالمنعطفات وتفادي الانزلاق بسرعة عالية</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">🔧</div>
+              <div class="feature-text">
+                <h5>ورش تزويد وتعديل</h5>
+                <p>تعديل إيروديناميكي، برمجة ECU، وإكزوست مخصص</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">🛡️</div>
+              <div class="feature-text">
+                <h5>أعلى معايير الأمان</h5>
+                <p>تجهيزات أمان معتمدة وأقفاص حماية رول كيج FIA</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">👑</div>
+              <div class="feature-text">
+                <h5>مجتمع نسائي حصري</h5>
+                <p>تجمعات خاصة، جولات طريق، ومساندة بين العضوات</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-primary">
+            <span>تعرفي أكثر على قصة الفريق ➔</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED GARAGE SHOWCASE ==================== -->
+  <section class="section section-elevated" id="garage">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-tag">المرآب والأسطول</span>
+        <h2 class="section-title">
+          أبرز وحوش <span class="gradient-text-pink">SpeedDivas</span>
+        </h2>
+        <p class="section-desc">
+          نخبة سيارات السوبر سبورت المعدلة خصيصاً بشعار وألوان الفريق الوردي والأبيض اللؤلؤي لخوض أقوى منافسات السرعة.
+        </p>
+      </div>
+
+      <!-- Car Cards Grid -->
+      <div class="garage-grid">
+        
+        <!-- Car 1: Porsche 911 GT3 RS -->
+        <article class="car-card">
+          <div class="car-image-box">
+            <span class="car-tag">وحش الحلبة 🏁</span>
+            <img src="img/porsche-pink.jpg" alt="Porsche 911 GT3 RS معدلة وردي">
+          </div>
+          <div class="car-info">
+            <h3 class="car-title">Porsche 911 GT3 RS</h3>
+            <span class="car-subtitle font-latin">Pink Apex Edition // 4.0L Boxer</span>
+            
+            <div class="car-specs">
+              <div class="spec-item">
+                <div class="spec-val">525 HP</div>
+                <div class="spec-label">القوة الحصانية</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-val">3.0 s</div>
+                <div class="spec-label">0-100 كم/س</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-val">296 كم/س</div>
+                <div class="spec-label">السرعة القصوى</div>
+              </div>
+            </div>
+
+            <div class="car-footer">
+              <span class="text-pink font-speed">CAPTAIN #01</span>
+              <a href="garage.html" class="btn btn-outline-pink btn-sm">عرض المواصفات</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Car 2: Nissan GT-R Nismo -->
+        <article class="car-card">
+          <div class="car-image-box">
+            <span class="car-tag">جودزيلا الوردية 🔥</span>
+            <img src="img/supercar-2.jpg" alt="Nissan GT-R Nismo معدلة">
+          </div>
+          <div class="car-info">
+            <h3 class="car-title">Nissan GT-R Nismo</h3>
+            <span class="car-subtitle font-latin">Diva Twin-Turbo // AWD Beast</span>
+            
+            <div class="car-specs">
+              <div class="spec-item">
+                <div class="spec-val">650 HP</div>
+                <div class="spec-label">القوة الحصانية</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-val">2.6 s</div>
+                <div class="spec-label">0-100 كم/س</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-val">330 كم/س</div>
+                <div class="spec-label">السرعة القصوى</div>
+              </div>
+            </div>
+
+            <div class="car-footer">
+              <span class="text-pink font-speed">CAPTAIN #07</span>
+              <a href="garage.html" class="btn btn-outline-pink btn-sm">عرض المواصفات</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Car 3: McLaren 720S -->
+        <article class="car-card">
+          <div class="car-image-box">
+            <span class="car-tag">صاروخ الديناميكا 🚀</span>
+            <img src="img/supercar-3.jpg" alt="McLaren 720S SpeedDivas Edition">
+          </div>
+          <div class="car-info">
+            <h3 class="car-title">McLaren 720S</h3>
+            <span class="car-subtitle font-latin">Fuchsia Aerodynamic // 4.0L V8</span>
+            
+            <div class="car-specs">
+              <div class="spec-item">
+                <div class="spec-val">720 HP</div>
+                <div class="spec-label">القوة الحصانية</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-val">2.7 s</div>
+                <div class="spec-label">0-100 كم/س</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-val">341 كم/س</div>
+                <div class="spec-label">السرعة القصوى</div>
+              </div>
+            </div>
+
+            <div class="car-footer">
+              <span class="text-pink font-speed">CAPTAIN #12</span>
+              <a href="garage.html" class="btn btn-outline-pink btn-sm">عرض المواصفات</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="garage.html" class="btn btn-outline-white btn-lg">
+          <span>تصفحي كامل أسطول السيارات (30+ سيارة) ➔</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TEAM PILLARS / WHY SPEEDDIVAS ==================== -->
+  <section class="section section-dark">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">ركائز الفريق</span>
+        <h2 class="section-title">
+          لماذا تختارين <span class="gradient-text-pink">SpeedDivas؟</span>
+        </h2>
+        <p class="section-desc">
+          بيئة متكاملة تمنحك الثقة، المهارة، والوصول لأحدث تقنيات رياضة السيارات وتحديات الحلبات.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🏎️</div>
+          <h3 class="pillar-title">أيام الحلبات المغلقة</h3>
+          <p class="pillar-desc">
+            حجز حلبات دولية بشكل حصري لعضوات الفريق لتجربة السرعة القصوى بأمان تام ودون قيود.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🎓</div>
+          <h3 class="pillar-title">أكاديمية التدريب</h3>
+          <p class="pillar-desc">
+            دورات تدريبية متقدمة في تقنيات الدريفت، خطوط التسارع (Apex Line)، وتوزيع الوزن والفرملة.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">💎</div>
+          <h3 class="pillar-title">تصميم وكسوة حصرية</h3>
+          <p class="pillar-desc">
+            تجليد مخصص واستيكرات رياضية وردية وبيضاء فاخرة تمنح سيارتك هوية بصرية مذهلة ومميزة.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🤝</div>
+          <h3 class="pillar-title">رعايات ومسابقات</h3>
+          <p class="pillar-desc">
+            فرص رعاية من كبرى شركات إطارات وزيوت وتعديل السيارات للمتميزات في البطولات الرسمية.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== UPCOMING TRACK EVENTS PREVIEW ==================== -->
+  <section class="section section-elevated" id="events">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">السباقات والفعاليات</span>
+        <h2 class="section-title">
+          الجولات <span class="gradient-text-pink">القادمة</span>
+        </h2>
+        <p class="section-desc">
+          انضمي إلينا في مدرجات الحلبة أو شاركي بسيارتك في أقوى الفعاليات الرياضية القادمة.
+        </p>
+      </div>
+
+      <div class="events-strip">
+        
+        <!-- Event 1 -->
+        <div class="event-box">
+          <div class="event-date">
+            <div class="day">14</div>
+            <div class="month">نوفمبر</div>
+          </div>
+          <div class="event-details">
+            <h4>يوم الحلبة المفتوح - حلبة الريم الدولية</h4>
+            <div class="event-meta">
+              <span>📍 الرياض، السعودية</span>
+              <span>⏱️ 4:00 عصراً - 11:00 مساءً</span>
+            </div>
+            <p>
+              جولة تايم أتاك واختبار أزمنة التسارع للسيارات المعدلة، مع تحدي دريفت استعراضي خاص بكباتن SpeedDivas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-box">
+          <div class="event-date">
+            <div class="day">02</div>
+            <div class="month">ديسمبر</div>
+          </div>
+          <div class="event-details">
+            <h4>تجمع السرعة والأناقة الوردي (Pink Speed Rally)</h4>
+            <div class="event-meta">
+              <span>📍 حلبة مرسى ياس، أبوظبي</span>
+              <span>⏱️ 5:00 مساءً - 12:00 منتصف الليل</span>
+            </div>
+            <p>
+              أكبر تجمع نسائي للسيارات السوبر سبورت والكلاسيكية المعدلة، يشمل عروض إضاءة ليلية وسباق ربع ميل.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="events.html" class="btn btn-primary">
+          <span>جدول الفعاليات والسباقات الكامل ➔</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== VIP MEMBERSHIP CTA BANNER ==================== -->
+  <section class="section section-dark">
+    <div class="container">
+      
+      <div class="cta-banner">
+        <div class="cta-banner-content">
+          <h2>جاهزة لتشعلي حلبات السرعة؟ 🏎️💨</h2>
+          <p>
+            سواء كنتِ تملكين سيارة خارقة أو تطمحين لبدء رحلتك في عالم سباقات السيارات، مقعدك محجوز بين نجمات SpeedDivas.
+          </p>
+
+          <form class="cta-input-group" onsubmit="event.preventDefault(); document.getElementById('joinModal').classList.add('active');">
+            <input type="email" class="cta-input" placeholder="أدخلي بريدك الإلكتروني للانضمام..." required>
+            <button type="submit" class="cta-btn-white">
+              قدّمي طلبكِ الآن ✨
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MASTER FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Col 1: About Brand -->
+        <div class="footer-col-about">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5v-3.25l2.25 2.25 1.41-1.41L13 10.42V7.5h-2v3.17l-3.66 3.67 1.41 1.41L11 13.5v3h2z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="brand-speed">SPEED</span><span class="brand-divas">DIVAS</span>
+            </div>
+          </a>
+          <p>
+            فريق سيارات سبورت نسائي رائد يجمع بين الأدرينالين، هندسة التعديل الخارق، والأناقة العصرية باللونين الوردي والأبيض. تمكين وبطولات وشغف لا يتوقف.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" title="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="TikTok">
+              <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-title">صفحات الموقع</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن والقصة</a></li>
+            <li><a href="garage.html">أسطول السيارات الرياضية</a></li>
+            <li><a href="events.html">جدول السباقات والفعاليات</a></li>
+            <li><a href="membership.html">الانضمام وشروط العضوية</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Garage Categories -->
+        <div>
+          <h4 class="footer-title">أقسام الأسطول</h4>
+          <ul class="footer-links">
+            <li><a href="garage.html">سيارات الحلبات (Track Beasts)</a></li>
+            <li><a href="garage.html">سيارات الدريفت (Drift Queens)</a></li>
+            <li><a href="garage.html">سيارات التايم أتاك والسحب</a></li>
+            <li><a href="garage.html">التعديل والكسوة الوردية</a></li>
+            <li><a href="contact.html">تواصل مع الإدارة</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div>
+          <h4 class="footer-title">تواصل مباشر</h4>
+          <div class="footer-contact-item">
+            <span>📍 الرياض - حلبة ديراب / حلبة الريم، المملكة العربية السعودية</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️ contact@speeddivas.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📱 +966 55 000 8899</span>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <button class="btn btn-outline-pink btn-sm open-join-modal" style="width: 100%;">
+              طلب عضوية فورية
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          جميع الحقوق محفوظة &copy; 2026 لفريق <strong>SpeedDivas</strong> لرياضة السيارات.
+        </div>
+
+        <!-- Developer Credit Badge -->
+        <div class="dev-credit-badge">
+          <span class="dev-spark">⚡</span>
+          <span class="dev-label">تطوير الموقع:</span>
+          <span class="dev-name">Made By RakanAlrajab</span>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">الشروط والأحكام</a>
+          <a href="#">FIA Safety Compliance</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== JOIN SPEEDDIVAS MODAL ==================== -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn" aria-label="إغلاق">&times;</button>
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="text-pink font-speed" style="font-size: 0.9rem; font-weight: 700;">// SPEEDDIVAS TEAM //</span>
+        <h3 style="font-size: 1.8rem; font-weight: 900; margin-top: 0.25rem; color: #fff;">
+          انضمي إلى أسطول <span class="gradient-text-pink">SpeedDivas</span>
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          املئي بياناتكِ وسنتواصل معكِ لتحديد موعد اختبار الحلبة أو المقابلة الترحيبية.
+        </p>
+      </div>
+
+      <form id="joinTeamForm">
+        <div class="form-group">
+          <label class="form-label">الاسم بالكامل:</label>
+          <input type="text" class="form-control" placeholder="مثال: نورة الشمري" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">رقم الجوال (واتساب):</label>
+          <input type="tel" class="form-control" placeholder="+966 5X XXX XXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">المدينة / الدولة:</label>
+          <input type="text" class="form-control" placeholder="مثال: الرياض، دبي، المنامة..." required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">نوع سيارتكِ الرياضية وموديلها:</label>
+          <input type="text" class="form-control" placeholder="مثال: Porsche Cayman GT4 / Nissan Z / BMW M4" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">مستوى الخبرة في القيادة الرياضية:</label>
+          <select class="form-control">
+            <option value="beginner">مبتدئة بشغف كبير (أريد التدريب)</option>
+            <option value="intermediate">متوسطة (أشارك في تجمعات وحلبات أحياناً)</option>
+            <option value="pro">محترفة / أملك رخصة سباق رسمية</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <span>إرسال طلب الانضمام 🏁</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Master JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>
+

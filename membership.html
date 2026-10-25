@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="الانضمام والعضوية - فريق SpeedDivas: اكتشفي باقات العضوية النسائية لرياضة السيارات، مزايا كباتن الحلبات، ورعاية المتسابقات المحترفات.">
+  <title>الانضمام والعضوية | SpeedDivas - بوابتكِ لعالم السرعة</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff2a85'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z'/></svg>">
+
+  <!-- Unified Master Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="SpeedDivas الرئيسية">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5v-3.25l2.25 2.25 1.41-1.41L13 10.42V7.5h-2v3.17l-3.66 3.67 1.41 1.41L11 13.5v3h2z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-speed">SPEED</span><span class="brand-divas">DIVAS</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="main-nav">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link">من نحن</a></li>
+          <li><a href="garage.html" class="nav-link">أسطول السيارات</a></li>
+          <li><a href="events.html" class="nav-link">الفعاليات والسباقات</a></li>
+          <li><a href="membership.html" class="nav-link active">الانضمام والعضوية</a></li>
+          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Interactive Engine Rev FX Button -->
+        <button id="engineRevBtn" class="btn btn-outline-pink btn-sm" title="استمعي لصوت محرك SpeedDivas">
+          <span>🔊 دَوسة المحرك</span>
+        </button>
+
+        <!-- Join Team CTA Modal Trigger -->
+        <button class="btn btn-primary btn-sm open-join-modal" data-tier="captain">
+          <span>انضمي للفريق ⚡</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== PAGE BANNER ==================== -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">الرئيسية</a>
+        <span>/</span>
+        <strong>الانضمام والعضوية</strong>
+      </div>
+      <h1 class="page-banner-title">
+        بوابتكِ لعالم <span class="gradient-text-pink">السرعة والاحتراف</span>
+      </h1>
+      <p class="section-desc" style="max-width: 720px; margin: 0 auto;">
+        انضمي لأول وأقوى مجتمع نسائي لرياضة وتعديل السيارات السوبر سبورت. اختاري الباقة المناسبة لمستواكِ وطموحكِ، وابدئي رحلتكِ معنا على خط الانطلاق.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== MEMBERSHIP OVERVIEW STATS ==================== -->
+  <section class="section section-dark" style="padding-top: 3.5rem; padding-bottom: 2rem;">
+    <div class="container">
+      
+      <div class="garage-overview-strip">
+        <div class="overview-item">
+          <div class="overview-number">+<span>52</span></div>
+          <div class="overview-label">كابتن وعضوة نشطة في الفريق</div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-number"><span>3</span></div>
+          <div class="overview-label">باقات عضوية مصممة لكل مستوى</div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-number"><span>100%</span></div>
+          <div class="overview-label">بيئة نسائية داعمة وآمنة ومحفزة</div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-number">+<span>15</span></div>
+          <div class="overview-label">ورشة ومركز تعديل وشريك حصري</div>
+        </div>
+      </div>
+
+      <!-- Section Title for Tiers -->
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">باقات العضوية</span>
+        <h2 class="section-title">
+          اختاري مستواكِ في <span class="gradient-text-pink">SpeedDivas</span>
+        </h2>
+        <p class="section-desc">
+          سواء كنتِ تودين خوض أول تجربة لكِ في مدرجات السباق أو تسجيل وحشكِ في أسطول الحلبة، صممنا لكِ باقات تمنحكِ أقصى امتيازات وتجربة استثنائية.
+        </p>
+      </div>
+
+      <!-- ==================== PRICING TIERS GRID ==================== -->
+      <div class="membership-grid">
+        
+        <!-- Tier 1: Fan & Supporter -->
+        <div class="membership-card">
+          <div class="membership-header">
+            <div class="membership-badge-icon">💖</div>
+            <h3 class="membership-title">الديفا الشغوفة</h3>
+            <p class="membership-subtitle font-latin">Diva Supporter & Fan</p>
+            <div class="membership-price">مجانية <span>// دخول المجتمع</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+              لعاشقات السيارات والمبتدئات اللواتي يردن حضور الفعاليات والتجمعات والتعلم عن قرب.
+            </p>
+          </div>
+
+          <ul class="membership-features">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>بطاقة العضوية الرقمية لفريق SpeedDivas</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>دعوات مجانية لحضور كافة تجمعات وراليات الفريق</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>باقة ترحيبية (تيشيرت وردي، كاب، واستيكرات حصرية)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>خصم 15% لدى كافيهات ومراكز غسيل وتعديل سيارات شريكة</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>الانضمام لمجتمع الديفاز وقنوات النقاش الفني وتبادل الخبرات</span>
+            </li>
+          </ul>
+
+          <div class="membership-footer">
+            <button class="btn btn-outline-pink open-join-modal" data-tier="fan" style="width: 100%;">
+              <span>انضمي كديفا شغوفة ✨</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 2: Track Captain (Featured) -->
+        <div class="membership-card featured">
+          <div class="featured-ribbon">الأكثر طلباً واشتراكاً 🌟</div>
+
+          <div class="membership-header">
+            <div class="membership-badge-icon">🏎️</div>
+            <h3 class="membership-title">كابتن الحلبة</h3>
+            <p class="membership-subtitle font-latin">Track Captain Diva</p>
+            <div class="membership-price">عضوية سنوية <span>// اشتراك معتمد</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+              لمالكات السيارات الرياضية (وكالة أو معدلة) والراغبات بخوض أيام الحلبة والدريفت.
+            </p>
+          </div>
+
+          <ul class="membership-features">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>كافة مزايا باقة الديفا الشغوفة كاملة</strong></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>تسجيل سيارتكِ رسمياً في المرآب برقم وكود كابتن مخصص</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>تجليد وكسوة جزئية للسيارة بخطوط الفريق الوردية والبيضاء</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>4 أيام حلبة مغلقة سنوياً (Track Days)</strong> بأجهزة توقيت رقمي</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>تدريب متقدم 1-on-1 مع مدربات سباق دوليات معتمدات من FIA</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>دعم فني وميكانيكي مجاني في منطقة الصيانة (Pit Lane) أثناء السباقات</span>
+            </li>
+          </ul>
+
+          <div class="membership-footer">
+            <button class="btn btn-primary open-join-modal" data-tier="captain" style="width: 100%;">
+              <span>قدّمي طلب عضوية كابتن 🏁</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 3: Pro Diva Elite -->
+        <div class="membership-card">
+          <div class="membership-header">
+            <div class="membership-badge-icon">👑</div>
+            <h3 class="membership-title">النخبة والاحتراف</h3>
+            <p class="membership-subtitle font-latin">Pro Diva Elite // Race Team</p>
+            <div class="membership-price">رعاية وبطولات <span>// ترشيح رسمي</span></div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+              للمتسابقات المحترفات وبطلات الدريفت والتايم أتاك الراغبات باعتلاء منصات التتويج.
+            </p>
+          </div>
+
+          <ul class="membership-features">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>كافة مزايا كابتن الحلبة والتدريب بالكامل</strong></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>تجهيز ميكانيكي كامل للسيارة وفق لوائح الاتحاد الدولي FIA</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>خوذة وبدلة سباق رسمية معتمدة ومخصصة بالاسم وشعار الفريق</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>إنتاج محتوى فيديو سينمائي وتغطية إعلامية مخصصة للكابتن</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>تمثيل SpeedDivas الرسمي في البطولات الخليجية والدولية</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>ربط مباشر مع كبرى شركات الإطارات والزيوت للحصول على رعاية رسمية</span>
+            </li>
+          </ul>
+
+          <div class="membership-footer">
+            <button class="btn btn-outline-pink open-join-modal" data-tier="pro" style="width: 100%;">
+              <span>طلب ترشيح النخبة 🏆</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== JOINING PROCESS (STEPS) ==================== -->
+  <section class="section section-elevated">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">خارطة الطريق</span>
+        <h2 class="section-title">
+          كيف تنضمين إلى <span class="gradient-text-pink">فريقنا؟</span>
+        </h2>
+        <p class="section-desc">
+          خطوات بسيطة وواضحة تأخذكِ من تقديم الطلب حتى الجلوس خلف عجلة القيادة على خط الانطلاق.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <div class="step-card">
+          <div class="step-num-badge">01</div>
+          <h3 class="step-title">تقديم الطلب</h3>
+          <p class="step-desc">
+            املئي نموذج الانضمام الإلكتروني واختاري الباقة التي تتناسب مع نوع سيارتكِ ومستوى خبرتكِ.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-badge">02</div>
+          <h3 class="step-title">المقابلة والترحيب</h3>
+          <p class="step-desc">
+            محادثة سريعة مع مسؤولة العضويات للتعرف عليكِ ومناقشة أهدافكِ واهتماماتكِ الرياضية.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-badge">03</div>
+          <h3 class="step-title">الفحص والكسوة</h3>
+          <p class="step-desc">
+            (لعضويات الكباتن) فحص فني لسلامة السيارة وتجهيز استيكرات ورقم الكابتن باللون الوردي والأبيض.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-badge">04</div>
+          <h3 class="step-title">يوم الانطلاق</h3>
+          <p class="step-desc">
+            استلام بطاقة العضوية وحزمة الهدايا، والمشاركة في أول يوم حلبة أو تجمع رسمي للفريق!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== REQUIREMENTS & STANDARDS ==================== -->
+  <section class="section section-dark">
+    <div class="container">
+      
+      <div class="intro-grid">
+        
+        <div class="intro-content">
+          <span class="section-tag">معايير السلامة والأمان</span>
+          <h3 class="section-title">
+            شروط الانضمام إلى <br>
+            <span class="gradient-text-pink">كباتن SpeedDivas</span>
+          </h3>
+          <p>
+            نضع سلامة عضواتنا وجودة الأجواء الأخوية في المقام الأول. هذه الشروط تضمن خوضكِ لأقوى تجارب السرعة باحترافية وأمان تام:
+          </p>
+
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon">🪪</div>
+              <div class="feature-text">
+                <h5>رخصة قيادة سارية</h5>
+                <p>رخصة قيادة سارية المفعول (سعودية أو دولية معتمدة).</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">🛡️</div>
+              <div class="feature-text">
+                <h5>الالتزام بسلامة الحلبة</h5>
+                <p>ارتداء الخوذة المعتمدة واتباع إرشادات المارشال وأعلام السباق.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">🔧</div>
+              <div class="feature-text">
+                <h5>الفحص الفني للسيارة</h5>
+                <p>سلامة المكابح والإطارات وخلو المحرك من أي تسريبات أثناء الحلبة.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">💖</div>
+              <div class="feature-text">
+                <h5>الروح الرياضية والأخوية</h5>
+                <p>تشجيع العضوات والتعاون الإيجابي وتمثيل الفريق بأرقى صورة.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary open-join-modal" data-tier="captain">
+            <span>ابدئي إجراءات الانضمام الآن ➔</span>
+          </button>
+        </div>
+
+        <div class="intro-image-wrap">
+          <div class="intro-image-frame">
+            <img src="img/about-driver.jpg" alt="كابتن في قمرة القيادة">
+          </div>
+          <div class="intro-floating-badge">
+            <div class="badge-icon">🏎️</div>
+            <div>
+              <h4>أمان واحترافية الحلبات</h4>
+              <p>تدريب متقدم تحت إشراف نخبة قائدات السباقات</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section class="section section-elevated">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">استفسارات متكررة</span>
+        <h2 class="section-title">
+          الأسئلة <span class="gradient-text-pink">الشائعة</span>
+        </h2>
+        <p class="section-desc">
+          كل ما تحتاجين معرفته حول باقات العضوية، الانضمام، وأيام الحلبة.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        
+        <div class="faq-item">
+          <h4 class="faq-question">
+            <span class="q-icon">❓</span>
+            <span>هل يشترط امتلاك سيارة رياضية خارقة للانضمام؟</span>
+          </h4>
+          <p class="faq-answer">
+            لا أبداً! إذا لم تكن لديكِ سيارة رياضية، يمكنكِ الانضمام عبر <strong>باقة الديفا الشغوفة</strong> والاستمتاع بكافة فعاليات وتجمعات الفريق، وركوب جولات التاكسي السريع في الحلبة، وحضور الورش النظرية.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">
+            <span class="q-icon">❓</span>
+            <span>أنا مبتدئة تماماً في قيادة الحلبات، هل المكان مناسب لي؟</span>
+          </h4>
+          <p class="faq-answer">
+            بالتأكيد! تأسس الفريق بالأساس لتوفير بيئة تعليمية آمنة خالية من أي أحكام. نوفر حصص تدريب متدرجة تبدأ بأساسيات خطوط التسارع وتفادي الانزلاق حتى تصبحي متمكنة وواثقة تماماً.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">
+            <span class="q-icon">❓</span>
+            <span>في أي مدن يتواجد فريق SpeedDivas حالياً؟</span>
+          </h4>
+          <p class="faq-answer">
+            يتمركز الفريق الرئيسي في الرياض (حلبة الريم وحلبة ديراب)، ولدينا كباتن وأنشطة في جدة، المنطقة الشرقية، بالإضافة لفعاليات دورية في حلبة مرسى ياس بأبوظبي وحلبة البحرين الدولية.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">
+            <span class="q-icon">❓</span>
+            <span>كيف يتم تجليد وكسوة السيارة باللونين الوردي والأبيض؟</span>
+          </h4>
+          <p class="faq-answer">
+            لدينا ورش شريكة معتمدة تقدم تصاميم ستيكرات وتجليد جزئي أو كامل للسيارة بأعلى درجات العزل والجودة لحماية صبغ الوكالة، مع إضافة شعار SpeedDivas ورقم الكابتن الخاص بكِ.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MASTER FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Col 1: About Brand -->
+        <div class="footer-col-about">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5v-3.25l2.25 2.25 1.41-1.41L13 10.42V7.5h-2v3.17l-3.66 3.67 1.41 1.41L11 13.5v3h2z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="brand-speed">SPEED</span><span class="brand-divas">DIVAS</span>
+            </div>
+          </a>
+          <p>
+            فريق سيارات سبورت نسائي رائد يجمع بين الأدرينالين، هندسة التعديل الخارق، والأناقة العصرية باللونين الوردي والأبيض. تمكين وبطولات وشغف لا يتوقف.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" title="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="TikTok">
+              <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-title">صفحات الموقع</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن والقصة</a></li>
+            <li><a href="garage.html">أسطول السيارات الرياضية</a></li>
+            <li><a href="events.html">جدول السباقات والفعاليات</a></li>
+            <li><a href="membership.html">الانضمام وشروط العضوية</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Garage Categories -->
+        <div>
+          <h4 class="footer-title">أقسام الأسطول</h4>
+          <ul class="footer-links">
+            <li><a href="garage.html">سيارات الحلبات (Track Beasts)</a></li>
+            <li><a href="garage.html">سيارات الدريفت (Drift Queens)</a></li>
+            <li><a href="garage.html">سيارات التايم أتاك والسحب</a></li>
+            <li><a href="garage.html">التعديل والكسوة الوردية</a></li>
+            <li><a href="contact.html">تواصل مع الإدارة</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div>
+          <h4 class="footer-title">تواصل مباشر</h4>
+          <div class="footer-contact-item">
+            <span>📍 الرياض - حلبة ديراب / حلبة الريم، المملكة العربية السعودية</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️ contact@speeddivas.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📱 +966 55 000 8899</span>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <button class="btn btn-outline-pink btn-sm open-join-modal" data-tier="captain" style="width: 100%;">
+              طلب عضوية فورية
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          جميع الحقوق محفوظة &copy; 2026 لفريق <strong>SpeedDivas</strong> لرياضة السيارات.
+        </div>
+
+        <!-- Developer Credit Badge -->
+        <div class="dev-credit-badge">
+          <span class="dev-spark">⚡</span>
+          <span class="dev-label">تطوير الموقع:</span>
+          <span class="dev-name">Made By RakanAlrajab</span>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">الشروط والأحكام</a>
+          <a href="#">FIA Safety Compliance</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== JOIN SPEEDDIVAS MODAL ==================== -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn" aria-label="إغلاق">&times;</button>
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="text-pink font-speed" style="font-size: 0.9rem; font-weight: 700;">// SPEEDDIVAS TEAM //</span>
+        <h3 style="font-size: 1.8rem; font-weight: 900; margin-top: 0.25rem; color: #fff;">
+          طلب الانضمام إلى <span class="gradient-text-pink">SpeedDivas</span>
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          املئي بياناتكِ وسنتواصل معكِ لتأكيد تفعيل عضويتكِ وتحديد موعد اختبار الحلبة.
+        </p>
+      </div>
+
+      <form id="joinTeamForm">
+        <div class="form-group">
+          <label class="form-label">الاسم بالكامل:</label>
+          <input type="text" class="form-control" placeholder="مثال: نورة الشمري" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">رقم الجوال (واتساب):</label>
+          <input type="tel" class="form-control" placeholder="+966 5X XXX XXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">المدينة / الدولة:</label>
+          <input type="text" class="form-control" placeholder="مثال: الرياض، دبي، المنامة..." required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">باقة العضوية المختارة:</label>
+          <select class="form-control" id="membershipTierSelect" required>
+            <option value="fan">💖 عضوية الديفا الشغوفة (Fan & Supporter)</option>
+            <option value="captain" selected>🏎️ عضوية كابتن الحلبة (Track Captain)</option>
+            <option value="pro">👑 عضوية النخبة والسباقات الرسمية (Pro Diva Elite)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">نوع سيارتكِ الرياضية وموديلها (إن وجدت):</label>
+          <input type="text" class="form-control" placeholder="مثال: Porsche 911 / Nissan Z / BMW M4 (اتركيها فارغة إن كنتِ منضمة كهاوية)">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">مستوى الخبرة في القيادة الرياضية:</label>
+          <select class="form-control">
+            <option value="beginner">مبتدئة بشغف كبير (أرغب بالتدريب من الصفر)</option>
+            <option value="intermediate">متوسطة (أشارك في تجمعات وحلبات أحياناً)</option>
+            <option value="pro">محترفة / أملك رخصة سباق رسمية</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <span>إرسال طلب العضوية الرسمي 🏁</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Master JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>
